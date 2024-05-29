@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Pop&Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Black&family=Roboto+Thin&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header text-white text-center py-2 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Pop&Art Logo" class="img-fluid" style="max-width: 100px;">
+                </a>
+            </div>
+            <nav class="d-flex align-items-center">
+                <a href="index.html" class="text-white mx-2">Accueil</a>
+                <div class="dropdown mx-2">
+                    <a href="products.html" class="text-white dropdown-toggle" data-toggle="dropdown">Produits</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Statues</a>
+                        <a class="dropdown-item" href="#">Tableaux</a>
+                        <a class="dropdown-item" href="#">Disney</a>
+                        <a class="dropdown-item" href="#">Star Wars</a>
+                        <a class="dropdown-item" href="#">Manga</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-white mx-2">À propos</a>
+                <a href="#" class="text-white mx-2" id="contactLink">Contact</a>
+            </nav>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="global-background">
+        <section class="products section">
+            <div class="container">
+                <h2 class="text-center text-background">Nos Produits</h2>
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <h3>Filtres</h3>
+                        <div class="filters">
+                            <div class="form-group">
+                                <label for="category">Catégorie</label>
+                                <select class="form-control" id="category">
+                                    <option value="">Toutes les catégories</option>
+                                    <option value="statues">Statues</option>
+                                    <option value="tableaux">Tableaux</option>
+                                    <option value="disney">Disney</option>
+                                    <option value="star-wars">Star Wars</option>
+                                    <option value="manga">Manga</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Prix</label>
+                                <select class="form-control" id="price">
+                                    <option value="">Tous les prix</option>
+                                    <option value="low-high">Du moins cher au plus cher</option>
+                                    <option value="high-low">Du plus cher au moins cher</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="sort">Trier par</label>
+                                <select class="form-control" id="sort">
+                                    <option value="">Aucun tri</option>
+                                    <option value="popularity">Popularité</option>
+                                    <option value="rating">Note</option>
+                                    <option value="newest">Nouveautés</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row" id="product-list">
+                            <!-- Les produits seront injectés ici via JavaScript -->
+                        </div>
+                        <nav aria-label="Page navigation" class="mt-4">
+                            <ul class="pagination justify-content-center" id="pagination">
+                                <!-- Pagination items will be injected here -->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="footer text-white text-center py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            <a href="#">Mentions légales</a><br>
+                            <a href="#">Conditions d'utilisation</a><br>
+                            <a href="#">Politique de confidentialité</a>
+                        </p>
+                    </div>
+                </div>
+                <p>Pop&Art - Tous droits réservés</p>
+                <p class="text-white">Suivez-nous sur :
+                    <a href="#" class="text-white mx-2">Facebook</a> |
+                    <a href="#" class="text-white mx-2">Twitter</a> |
+                    <a href="#" class="text-white mx-2">Instagram</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contactez-nous</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Nom:</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Votre email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary bg-pink border-0">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

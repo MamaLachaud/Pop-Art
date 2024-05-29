@@ -1,0 +1,371 @@
+/* Existing styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.global-background {
+    background-image: url('images/section_background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.header, .footer {
+    color: white;
+    font-family: 'Roboto Black', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    background: url('images/header_background.png') no-repeat center center/cover;
+    padding: 10px 0;
+}
+
+.footer {
+    background: url('images/footer_background.png') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajoute un fond sombre pour améliorer la lisibilité */
+    padding: 20px 0;
+}
+
+.header nav a, .footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header nav a:hover, .footer a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    position: relative;
+    background: url('images/banner_new.png') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Opacité plus élevée pour rendre le texte lisible */
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #E83890;
+}
+
+.section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+.section .btn {
+    background-color: #E83890;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.section .btn:hover {
+    background-color: #c52970;
+}
+
+.recommended, .best-sellers, .favorites, .new-arrivals, .about, .contact, .newsletter {
+    background: rgba(0, 0, 0, 0.7); /* Opacité plus élevée pour rendre le texte lisible */
+    color: white;
+    position: relative;
+}
+
+.recommended .card, .best-sellers .card, .favorites .card, .new-arrivals .card {
+    background-color: white;
+    color: #333;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.recommended .card:hover, .best-sellers .card:hover, .favorites .card:hover, .new-arrivals .card:hover {
+    transform: scale(1.05);
+}
+
+.recommended .card img, .best-sellers .card img, .favorites .card img, .new-arrivals .card img {
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: contain; /* Assurez-vous que l'image est entièrement visible */
+    width: 100%; /* Assure que les images ne sont pas coupées */
+}
+
+.text-background {
+    background-color: rgba(0, 0, 0, 0.7); /* Opacité plus élevée pour rendre le texte lisible */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .container {
+    background-color: rgba(0, 0, 0, 0.7); /* Ajoute un fond sombre pour améliorer la lisibilité */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.footer .container h4 {
+    margin-bottom: 15px;
+}
+
+/* Animations */
+.section {
+    opacity: 1;
+    transform: translateY(0); /* Retirer les transitions pour éviter le problème d'opacité */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.btn.hover {
+    background-color: #c52970;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Dropdown menu adjustments */
+.dropdown-menu {
+    background-color: #333;
+    border: none;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #555;
+}
+
+/* Modal (Pop-up) styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    color: #E83890;
+    text-align: center;
+}
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Carousel control styles */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-control-prev {
+    left: -60px; /* Position to the left of the section */
+}
+
+.carousel-control-next {
+    right: -60px; /* Position to the right of the section */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+    background-size: 100%, 100%;
+    background-color: white; /* Make the arrows more visible */
+    border-radius: 50%;
+}
+
+/* Products Page Styles */
+.products .filters {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.products .filters h3 {
+    color: #E83890;
+    margin-bottom: 20px;
+}
+
+.products .filters .form-group label {
+    color: #333;
+    font-weight: bold;
+}
+
+.products .product-card {
+    background-color: white;
+    color: #333;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-bottom: 30px;
+}
+
+.products .product-card:hover {
+    transform: scale(1.05);
+}
+
+.products .product-card img {
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: contain; /* Assurez-vous que l'image est entièrement visible */
+    width: 100%; /* Assure que les images ne sont pas coupées */
+}
+
+.products .product-card .card-body {
+    text-align: center;
+}
+
+.products .product-card .product-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.products .product-card .product-description {
+    font-size: 1em;
+    color: #666;
+}
+
+
+
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre semi-transparent */
+    z-index: 1;
+}
+
+.header nav {
+    position: relative;
+    z-index: 2;
+}
+.header img{
+    position: relative;
+    z-index: 2;
+}
+.header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: #E83890; /* Couleur rose au survol */
+    text-decoration: underline;
+}
+
+.form-inline {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+

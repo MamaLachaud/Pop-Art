@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de nous - Pop&Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Black&family=Roboto+Thin&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <header class="header text-white text-center py-2 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Pop&Art Logo" class="img-fluid" style="max-width: 100px;">
+                </a>
+            </div>
+            <nav class="d-flex align-items-center">
+                <a href="index.html" class="text-white mx-2">Accueil</a>
+                <div class="dropdown mx-2">
+                    <a href="products.html" class="text-white dropdown-toggle" id="productsDropdown">Produits</a>
+                    <div class="dropdown-menu" id="productsMenu">
+                        <a class="dropdown-item" href="#">Statues</a>
+                        <a class="dropdown-item" href="#">Tableaux</a>
+                        <a class="dropdown-item" href="#">Disney</a>
+                        <a class="dropdown-item" href="#">Star Wars</a>
+                        <a class="dropdown-item" href="#">Manga</a>
+                        <a class="dropdown-item" href="#">Comics</a>
+                        <a class="dropdown-item" href="#">Jeux Vidéo</a>
+                    </div>
+                </div>
+                <a href="about.html" class="text-white mx-2">À propos</a>
+                <a href="#" class="text-white mx-2" id="contactLink">Contact</a>
+            </nav>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+        </div>
+    </header>
+
+    <div class="global-background">
+        <section class="about section">
+            <div class="container">
+                <h2 class="text-center text-background">À propos de nous</h2>
+                <div class="row">
+                    <div class="col-md-6 text-background">
+                        <h3>Notre Mission</h3>
+                        <p>Offrir des objets de collection artisanaux uniques qui capturent l'essence de la pop culture.</p>
+                    </div>
+                    <div class="col-md-6 text-background">
+                        <h3>Notre Vision</h3>
+                        <p>Devenir la référence mondiale pour les objets de collection inspirés par la pop culture.</p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6 text-background">
+                        <h3>Notre Histoire</h3>
+                        <p>Fondée en juin 2023, Pop&Art a rapidement gagné en popularité grâce à son engagement envers l'artisanat et la culture.</p>
+                    </div>
+                    <div class="col-md-6 text-background">
+                        <h3>Notre Équipe</h3>
+                        <p>Notre équipe est composée de créateurs passionnés et de professionnels dévoués à offrir le meilleur à nos clients. Elle est actuellement composée de 5 personnes : le PDG, une graphiste, un commercial, une cheffe de projet et un vendeur en boutique physique dans la ville de Lyon.</p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6 text-background">
+                        <h3>Nos Produits</h3>
+                        <p>L’entreprise propose à la vente des objets inspirés d'éléments de la pop culture, boîtes, bijoux, objets décoratifs... Les objets se veulent de grande qualité et sont disponibles en peu d'exemplaires, l’objectif de Pop&Art n'étant pas de créer des séries en grande quantité, mais des objets uniques et originaux.</p>
+                    </div>
+                    <div class="col-md-6 text-background">
+                        <h3>Nos Licences</h3>
+                        <p>Parmi les licences disponibles, vous pouvez retrouver par exemple des sculptures inspirées du studio Ghibli avec des noiraudes du monde de Totoro ou encore des éléments inspirés de jeux vidéo comme Zelda ou Assassin’s Creed. La pop culture regorge de références et de possibilités en matière de personnages et d'objets décoratifs.</p>
+                    </div>
+                </div>
+                <div class="row mt-4 about-images">
+                    <div class="col-md-6">
+                        <img src="images/about1.png" alt="About 1" class="img-fluid rounded mb-3">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/about2.png" alt="About 2" class="img-fluid rounded mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="footer text-white text-center py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            <a href="#">Mentions légales</a><br>
+                            <a href="#">Conditions d'utilisation</a><br>
+                            <a href="#">Politique de confidentialité</a>
+                        </p>
+                    </div>
+                </div>
+                <p>Pop&Art - Tous droits réservés</p>
+                <p class="text-white">Suivez-nous sur :
+                    <a href="#" class="text-white mx-2">Facebook</a> |
+                    <a href="#" class="text-white mx-2">Twitter</a> |
+                    <a href="#" class="text-white mx-2">Instagram</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contactez-nous</h2>
+            <form>
+                <div class="form-row text-background">
+                    <div class="form-group col-md-6">
+                        <label for="name">Nom:</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Votre email">
+                    </div>
+                </div>
+                <div class="form-group text-background">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary bg-pink border-0">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
